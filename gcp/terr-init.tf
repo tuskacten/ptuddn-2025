@@ -9,7 +9,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = "gcp-bucket-terr-01" #FIXME Update the value if new project
+    bucket = "gcp-bucket-terr-011" #FIXME Update the value if new project
     prefix = "terraform/state"
   }
 }

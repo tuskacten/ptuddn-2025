@@ -7,16 +7,17 @@ NC='\033[0m'
 #? To run from your laptop:  gcloud auth application-default login
 
 # Parameters
-PROJECT_ID=development-298310 #FIXME Update the value if new project
-ZONE=europe-west2-b
-BUCKET_NAME=gcp-bucket-terr-01
-BUCKET_LOCATION=europe-west2
+export PROJECT_ID=gke-k8-cluster #FIXME Update the value if new project
+export ZONE=europe-west2-b
+export BUCKET_NAME=gcp-bucket-terr-011
+export BUCKET_LOCATION=europe-west2
 
 cat <<EOF
 #*------------------------------------------------
 #*   GCP --Create Terraform's backend --Enable API
 #*------------------------------------------------
 EOF
+gcloud services enable storage.googleapis.com
 
 echo
 gsutil mb -p $PROJECT_ID -l $BUCKET_LOCATION -b on gs://$BUCKET_NAME
@@ -44,6 +45,7 @@ EOF
 
 echo
 gcloud container clusters get-credentials dev-k8s --zone $ZONE --project $PROJECT_ID
+
 echo
 
 cat <<EOF
