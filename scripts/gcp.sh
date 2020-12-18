@@ -7,10 +7,10 @@ NC='\033[0m'
 #? To run from your laptop:  gcloud auth application-default login
 
 # Parameters
-export PROJECT_ID=gke-k8-cluster #FIXME Update the value if new project
-export ZONE=europe-west2-b
-export BUCKET_NAME=gcp-bucket-terr-011
-export BUCKET_LOCATION=europe-west2
+PROJECT_ID=gke-k8-cluster #FIXME Update the value if new project
+ZONE=europe-west2-b
+BUCKET_NAME=gcp-bucket-terr-011
+BUCKET_LOCATION=europe-west2
 
 cat <<EOF
 #*------------------------------------------------
@@ -71,3 +71,6 @@ cd ../app && kubectl apply -f argo_config/eshop-project.yml && kubectl apply -f 
 
 echo
 echo -e "${LBLUE}--> Access Octant web ui:${NC}${GREEN} kubectl port-forward svc/octant -n octant 8000:8000 ${NC}--> in:${NC}${GREEN} localhost:8000${NC}\n"
+echo
+
+echo -e "${LBLUE}--> Access Shock Shop web :${NC}${GREEN} kubectl port-forward svc/front-end -n esho-staging 8088:80 ${NC}--> in:${NC}${GREEN} localhost:8000${NC}\n"
