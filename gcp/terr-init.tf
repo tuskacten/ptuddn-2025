@@ -3,7 +3,7 @@
 #*------------------------------------------------
 
 provider "google" {
-  project = "development-298310" #FIXME Update the value if new project
+  project = "gke-k8-cluster" #FIXME Update the value if new project
   region  = "europe-west2"
 }
 

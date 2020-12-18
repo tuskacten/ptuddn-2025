@@ -1,8 +1,10 @@
 #################################################################################################
 # Set the credentials for Google Cloud Config Connector
 configConnector:
-  googleServiceAccount: "k8s-service-account@development-298310.iam.gserviceaccount.com" #FIXME Update the value if new project
+  googleServiceAccount: "k8s-service-account@gke-k8-cluster.iam.gserviceaccount.com" #FIXME Update the value if new project
 
+## Replace ONLY the projectId < k8s-service-account@PROJECT_ID.iam.gserviceaccount.com > 
+## Service Account is configured by Terraform
 #################################################################################################
 
 
