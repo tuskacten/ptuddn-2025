@@ -15,7 +15,7 @@ spec:
       valueFiles:
         - values.yaml
     path: app/eshop
-    repoURL: https://github.com/J0hn-B/gcp.git
+    repoURL: https://github.com/J0hn-B/eshop-gcp.git
     targetRevision: HEAD
   syncPolicy:
     automated:

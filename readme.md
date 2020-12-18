@@ -1,5 +1,7 @@
 # Start Here
 
+```git clone```
+
 - Go to ```~/gcp/terr-init.tf``` and update the provider and backend blocks with your values
 
 - Go to ```~/scripts/gcp.sh``` and update ```# Parameters``` with your values.

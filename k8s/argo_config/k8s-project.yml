@@ -15,5 +15,5 @@ spec:
     - group: "*"
       kind: "*"
   sourceRepos:
-    - https://github.com/J0hn-B/gcp.git
+    - https://github.com/J0hn-B/eshop-gcp.git
     - "*"
