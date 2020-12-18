@@ -73,4 +73,4 @@ echo
 echo -e "${LBLUE}--> Access Octant web ui:${NC}${GREEN} kubectl port-forward svc/octant -n octant 8000:8000 ${NC}--> in:${NC}${GREEN} localhost:8000${NC}\n"
 echo
 
-echo -e "${LBLUE}--> Access Shock Shop web :${NC}${GREEN} kubectl port-forward svc/front-end -n esho-staging 8088:80 ${NC}--> in:${NC}${GREEN} localhost:8000${NC}\n"
+echo -e "${LBLUE}--> Access Shock Shop web :${NC}${GREEN} kubectl port-forward svc/front-end -n eshop-staging 8088:80 ${NC}--> in:${NC}${GREEN} localhost:8088${NC}\n"
