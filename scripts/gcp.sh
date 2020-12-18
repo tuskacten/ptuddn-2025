@@ -9,7 +9,7 @@ NC='\033[0m'
 # Parameters
 PROJECT_ID=gke-k8-cluster #FIXME Update the value if new project
 ZONE=europe-west2-b
-BUCKET_NAME=gcp-bucket-terr-011
+BUCKET_NAME=gcp-bucket-terr-011 #FIXME Update the value if new project
 BUCKET_LOCATION=europe-west2
 
 cat <<EOF
