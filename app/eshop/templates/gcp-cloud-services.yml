@@ -1,0 +1,24 @@
+# Check the namespaces and update the annotations
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ .Values.gcpCloudServices.name }}
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+
+spec:
+  destination:
+    namespace: {{ .Values.gcpCloudServices.namespace }}
+    server: https://kubernetes.default.svc
+  project: eshop-staging
+  source:
+    helm:
+      valueFiles:
+      - values.yaml
+    path: app/gcp-cloud-services
+    repoURL: https://github.com/J0hn-B/gcp.git
+    targetRevision: HEAD
+  syncPolicy: 
+    automated:
+      prune: true

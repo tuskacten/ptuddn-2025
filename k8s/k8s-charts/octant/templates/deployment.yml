@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: octant
+  namespace: octant
+  labels:
+    app: octant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: octant
+  template:
+    metadata:
+      labels:
+        app: octant
+    spec:
+      serviceAccountName: octant-sa
+      containers:
+        - name: octant
+          image: johnb79/octant:2.0
+          resources:
+            requests:
+              memory: "300Mi"
+              cpu: "500m"
+            limits:
+              memory: "700Mi"
+              cpu: "900m"
+          ports:
+            - containerPort: 8000

@@ -1,0 +1,43 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: octant
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+
+rules:
+  - apiGroups:
+      - "*"
+    resources:
+      - "*"
+    verbs:
+      - get
+      - list
+      - watch
+
+  - nonResourceURLs:
+      - "*"
+    verbs:
+      - get
+      - list
+      - watch
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: octant-clusterrolebinding
+subjects:
+  - kind: ServiceAccount
+    name: octant-sa
+    namespace: default
+roleRef:
+  kind: ClusterRole
+  name: octant
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: octant-sa

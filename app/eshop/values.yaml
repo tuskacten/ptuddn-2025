@@ -1,0 +1,4 @@
+gcpCloudServices:
+  name: gcp-cloud-services
+  namespace: eshop-staging  # The namespace to deploy cloud resources. Update the namespace annotations!!
+  # cnrm.cloud.google.com/project-id: <your_google_project_id>, for Config Connector connection

@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: octant-clusterrolebinding
+subjects:
+  - kind: ServiceAccount
+    name: octant-sa
+    namespace: octant # Service accounts are namespaced. 
+roleRef:
+  kind: ClusterRole
+  name: octant
+  apiGroup: rbac.authorization.k8s.io

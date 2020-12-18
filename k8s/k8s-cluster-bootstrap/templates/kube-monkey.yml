@@ -1,0 +1,32 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: {{ .Values.chaosMonkey.name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+
+
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ .Values.chaosMonkey.name }}
+  namespace: argocd
+  annotations:
+ 
+spec:
+  destination:
+    namespace: {{ .Values.chaosMonkey.name }}
+    server: https://kubernetes.default.svc
+  project: k8s-config
+  source:
+    helm:
+      valueFiles:
+      - values.yaml
+    path: k8s/k8s-charts/kubemonkey
+    repoURL: https://github.com/J0hn-B/gcp.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true

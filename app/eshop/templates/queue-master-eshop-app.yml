@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: queue-master
+  namespace: argocd
+spec:
+  destination:
+    namespace: eshop-staging
+    server: https://kubernetes.default.svc
+  project: eshop-staging
+  source:
+    helm:
+      valueFiles:
+        - values.yaml
+    path: services/queue-master
+    repoURL: https://github.com/J0hn-B/gcp.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true

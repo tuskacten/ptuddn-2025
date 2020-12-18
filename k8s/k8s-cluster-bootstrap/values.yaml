@@ -1,0 +1,17 @@
+#################################################################################################
+# Set the credentials for Google Cloud Config Connector
+configConnector:
+  googleServiceAccount: "k8s-service-account@development-298310.iam.gserviceaccount.com" #FIXME Update the value if new project
+
+#################################################################################################
+
+
+certManager:
+  name: cert-manager
+
+chaosMonkey:
+  name: kube-monkey
+
+
+octant:
+  name: octant

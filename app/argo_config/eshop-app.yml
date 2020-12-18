@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-eshop-bootstrap
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  destination:
+    namespace: eshop-staging
+    server: https://kubernetes.default.svc
+  project: eshop-staging
+  source:
+    helm:
+      valueFiles:
+        - values.yaml
+    path: app/eshop
+    repoURL: https://github.com/J0hn-B/gcp.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true

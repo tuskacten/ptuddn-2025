@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: octant
+  namespace: octant
+spec:
+  selector:
+    app: octant
+  ports:
+    - port: 8000
+      targetPort: 8000
