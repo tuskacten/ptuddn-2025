@@ -1,6 +1,6 @@
 # Sample Project
 
-GitOps based project, based on ArgoCD.
+GitOps project, based on ArgoCD.
 App of apps deployment style.
 
 Use as reference.
