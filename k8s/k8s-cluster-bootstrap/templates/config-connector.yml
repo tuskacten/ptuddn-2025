@@ -7,4 +7,4 @@ metadata:
   name: configconnector.core.cnrm.cloud.google.com
 spec:
  mode: cluster
- googleServiceAccount: {{ .Values.configConnector.googleServiceAccount }}
+ googleServiceAccount: "k8s-service-account@{{ .Values.gke.projectId }}.iam.gserviceaccount.com"

@@ -5,6 +5,6 @@ metadata:
   name: eshop-staging
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
-    cnrm.cloud.google.com/project-id: gke-k8-cluster   #FIXME Update the value if new project
+    cnrm.cloud.google.com/project-id: {{ .Values.gke.projectId }}   
   labels:
     istio-injection: enabled
