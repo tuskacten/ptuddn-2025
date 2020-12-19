@@ -1,9 +1,12 @@
-# Sample Project
+# GKE sample application with ArgoCD
+
+- Status: Ready to deploy
 
 GitOps project, based on ArgoCD.
 App of apps deployment style.
+The project enables Config Connector for managing Google Cloud resources through Kubernetes.
 
-Use as reference.
+Use as reference or for testing purposes.
 
 ## GKE cluster
 
