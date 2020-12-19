@@ -1,2 +1,2 @@
 storageBucket:
-  projectId: development-298310 #FIXME Update the value if new project
+  projectId: gke-k8-cluster  #FIXME Update the value if new project
