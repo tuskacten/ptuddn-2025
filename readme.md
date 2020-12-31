@@ -6,6 +6,10 @@ GitOps project, based on ArgoCD.
 App of apps deployment style.
 The project enables **Config Connector for managing Google Cloud resources through Kubernetes.**
 
+<https://cloud.google.com/config-connector/docs/overview>
+
+Check **app/gcp-cloud-services/templates** for storage config with Config Connector
+
 Use as reference or for testing purposes.
 
 ## GKE cluster
