@@ -4,7 +4,7 @@
 
 GitOps project, based on ArgoCD.
 App of apps deployment style.
-The project enables Config Connector for managing Google Cloud resources through Kubernetes.
+The project enables **Config Connector for managing Google Cloud resources through Kubernetes.**
 
 Use as reference or for testing purposes.
 
