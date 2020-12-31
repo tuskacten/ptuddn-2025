@@ -6,6 +6,9 @@ GitOps project, based on ArgoCD.
 App of apps deployment style.
 The project enables **Config Connector for managing Google Cloud resources through Kubernetes.**
 
+Config Connector provides a collection of Kubernetes Custom Resource Definitions (CRDs) and controllers.
+The Config Connector CRDs allow Kubernetes to create and manage Google Cloud resources when you configure and apply Objects to your cluster.
+
 <https://cloud.google.com/config-connector/docs/overview>
 
 Check **app/gcp-cloud-services/templates** for storage config with Config Connector
