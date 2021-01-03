@@ -1,6 +1,5 @@
 # GKE sample application with ArgoCD
 
-> [!NOTE]
 > Use as reference
 
 GitOps project, based on ArgoCD.
