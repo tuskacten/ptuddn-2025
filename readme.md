@@ -1,6 +1,7 @@
 # GKE sample application with ArgoCD
 
-- Status: Ready to deploy
+> [!NOTE]
+> Use as reference
 
 GitOps project, based on ArgoCD.
 App of apps deployment style.
