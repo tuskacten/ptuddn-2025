@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: front-end
-        image: weaveworksdemos/front-end:0.3.12
+        image: tuskacten/sockshop-frontend:custom
         resources:
           limits:
             cpu: 300m

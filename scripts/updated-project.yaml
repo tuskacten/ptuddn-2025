@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: eshop-staging
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: ""
+    kind: ""
+  description: eshop-staging project configuration
+  destinations:
+  - namespace: eshop-staging
+    server: https://kubernetes.default.svc
+  - namespace: argocd
+    server: https://kubernetes.default.svc
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  sourceRepos:
+  - https://github.com/J0hn-B/eshop-gcp.git
+  - https://github.com/tuskacten/ptuddn-2025.git
