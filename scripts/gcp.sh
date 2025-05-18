@@ -7,9 +7,9 @@ NC='\033[0m'
 #? To run from your laptop:  gcloud auth application-default login
 
 # Parameters
-PROJECT_ID=development-298310 #FIXME Update the value if new project
+PROJECT_ID=ptuddn-2025 #FIXME Update the value if new project
 ZONE=europe-west2-b
-BUCKET_NAME=gcp-bucket-terr-011 #FIXME Update the value if new project
+BUCKET_NAME=ptuddn-2025-tfstate-01 #FIXME Update the value if new project
 BUCKET_LOCATION=europe-west2
 
 cat <<EOF

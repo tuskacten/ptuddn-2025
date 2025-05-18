@@ -29,7 +29,7 @@ resource "google_container_cluster" "dev" {
   }
 
   workload_identity_config {
-    identity_namespace = "${data.google_project.project.project_id}.svc.id.goog"
+    workload_pool = "${data.google_project.project.project_id}.svc.id.goog"
   }
 
   # VPC-native clusters route traffic between pods using a VPC network, and are able to route to other VPCs across network peerings along with several other benefits.
@@ -39,9 +39,6 @@ resource "google_container_cluster" "dev" {
   }
 
   master_auth {
-    username = ""
-    password = ""
-
     client_certificate_config {
       issue_client_certificate = false
     }
@@ -78,7 +75,7 @@ resource "google_container_node_pool" "primary_nodes" {
 
   autoscaling {
     min_node_count = "1"
-    max_node_count = "5"
+    max_node_count = "3"
   }
 
   management {
@@ -87,8 +84,11 @@ resource "google_container_node_pool" "primary_nodes" {
   }
 
   node_config {
-    preemptible  = false
-    machine_type = "e2-standard-2"
+    preemptible  = true
+    machine_type = "e2-medium"
+
+    disk_type    = "pd-standard"
+    disk_size_gb = 50
 
     metadata = {
       disable-legacy-endpoints = "true"

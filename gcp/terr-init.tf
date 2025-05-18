@@ -3,13 +3,13 @@
 #*------------------------------------------------
 
 provider "google" {
-  project = "development-298310" #FIXME Update the value if new project
+  project = "ptuddn-2025"
   region  = "europe-west2"
 }
 
 terraform {
   backend "gcs" {
-    bucket = "gcp-bucket-terr-011" #FIXME Update the value if new project
+    bucket = "ptuddn-2025-tfstate-01"
     prefix = "terraform/state"
   }
 }

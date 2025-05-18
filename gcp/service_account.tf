@@ -32,4 +32,7 @@ resource "google_service_account_iam_member" "config_connector" {
   service_account_id = google_service_account.config_connector.name
   role               = "roles/iam.workloadIdentityUser"
   member             = "serviceAccount:${data.google_project.project.project_id}.svc.id.goog[cnrm-system/cnrm-controller-manager]"
+  
+  # Đảm bảo resource này được tạo sau khi cluster GKE đã được tạo hoàn toàn
+  depends_on = [google_container_cluster.dev]
 }
