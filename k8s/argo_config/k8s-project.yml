@@ -15,5 +15,6 @@ spec:
     - group: "*"
       kind: "*"
   sourceRepos:
-    - https://github.com/J0hn-B/eshop-gcp.git
+    - https://github.com/tuskacten/ptuddn-2025.git
     - "*"
+

@@ -13,7 +13,7 @@ spec:
       valueFiles:
         - values.yaml
     path: services/carts
-    repoURL: https://github.com/J0hn-B/eshop-gcp.git
+    repoURL: https://github.com/tuskacten/ptuddn-2025.git
     targetRevision: HEAD
   syncPolicy:
     automated:
